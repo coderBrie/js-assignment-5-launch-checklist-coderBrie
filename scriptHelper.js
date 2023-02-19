@@ -29,39 +29,48 @@ function validateInput(testInput) {
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
    
 
-//   // Validate input fields
- 
-
-//   // Update shuttle requirements
-//   pilotStatus.innerHTML = `Pilot ${pilotName} is ${pilotIsValid ? "ready" : "not ready"}.`;
-//   copilotStatus.innerHTML = `Co-pilot ${copilotName} is ${copilotIsValid ? "ready" : "not ready"}.`;
-//   fuelStatus.innerHTML = `Fuel level of ${fuelLevel} liters is ${fuelIsValid ? "sufficient" : "insufficient"} for launch.`;
-//   cargoStatus.innerHTML = `Cargo mass of ${cargoMass} kg is ${cargoIsValid ? "low enough" : "too high"} for launch.`;
-
-//   // Check shuttle requirements
-//   let hasFaultyItems = false;
-//   if (fuelIsValid && fuelLevel < 10000) {
-//     fuelStatus.innerHTML = `Fuel level of ${fuelLevel} liters is insufficient for launch.`;
-//     hasFaultyItems = true;
-//   }
-//   if (cargoIsValid && cargoMass > 10000) {
-//     cargoStatus.innerHTML = `Cargo mass of ${cargoMass} kg is too high for launch.`;
-//     hasFaultyItems = true;
-//   }
-//   if (hasFaultyItems) {
-//     faultyItems.style.visibility = "visible";
-//     launchStatus.innerHTML = "Shuttle not ready for launch";
-//     launchStatus.style.color = "red";
-//   } else {
-//     faultyItems.style.visibility = "hidden";
-//     launchStatus.innerHTML = "Shuttle is ready for launch";
-//     launchStatus.style.color = "green";
-//   }
-
-//   // Prevent default form submission
-//   event.preventDefault();
-   
-// }
+    const pilotStatus = document.getElementById("pilotStatus");
+    const copilotStatus = document.getElementById("copilotStatus");
+    const fuelStatus = document.getElementById("fuelStatus");
+    const cargoStatus = document.getElementById("cargoStatus");
+    const launchStatus = document.getElementById("launchStatus");
+    const faultyItems = document.getElementById("faultyItems");
+  
+    // Validate input fields
+    const pilotIsValid = validateInput(pilotName) === "Is a Number";
+    const copilotIsValid = validateInput(copilotName) === "Is a Number";
+    const fuelIsValid = validateInput(fuelLevel) === "Is a Number";
+    const cargoIsValid = validateInput(cargoMass) === "Is a Number";
+  
+    // Update shuttle requirements
+    pilotStatus.innerHTML = `Pilot ${pilotName} is ${pilotIsValid ? "ready" : "not ready"}.`;
+    copilotStatus.innerHTML = `Co-pilot ${copilotName} is ${copilotIsValid ? "ready" : "not ready"}.`;
+    fuelStatus.innerHTML = `Fuel level of ${fuelLevel} liters is ${fuelIsValid ? "sufficient" : "insufficient"} for launch.`;
+    cargoStatus.innerHTML = `Cargo mass of ${cargoMass} kg is ${cargoIsValid ? "low enough" : "too high"} for launch.`;
+  
+    // Check shuttle requirements
+    let hasFaultyItems = false;
+    if (fuelIsValid && fuelLevel < 10000) {
+      fuelStatus.innerHTML = `Fuel level of ${fuelLevel} liters is insufficient for launch.`;
+      hasFaultyItems = true;
+    }
+    if (cargoIsValid && cargoMass > 10000) {
+      cargoStatus.innerHTML = `Cargo mass of ${cargoMass} kg is too high for launch.`;
+      hasFaultyItems = true;
+    }
+    if (hasFaultyItems) {
+      faultyItems.style.visibility = "visible";
+      launchStatus.innerHTML = "Shuttle not ready for launch";
+      launchStatus.style.color = "red";
+    } else {
+      faultyItems.style.visibility = "hidden";
+      launchStatus.innerHTML = "Shuttle is ready for launch";
+      launchStatus.style.color = "green";
+    }
+  
+    // Prevent default form submission
+    event.preventDefault();
+  }
 //stop the submission//
 async function myFetch() {
     let planetsReturned;
