@@ -54,11 +54,11 @@ function formSubmission(document, pilotStatus, copilotStatus, fuelLevel, cargoSt
       fuelStatus.innerHTML = `Fuel level of ${fuelLevel} liters is insufficient for launch.`;
       hasFaultyItems = true;
     }
-    if (cargoIsValid && cargoMass > 10000) {
+   else if (cargoIsValid && cargoMass > 10000) {
       cargoStatus.innerHTML = `Cargo mass of ${cargoMass} kg is too high for launch.`;
       hasFaultyItems = true;
     }
-    if (hasFaultyItems) {
+   else if (hasFaultyItems) {
       faultyItems.style.visibility = "visible";
       launchStatus.innerHTML = "Shuttle not ready for launch";
       launchStatus.style.color = "red";
