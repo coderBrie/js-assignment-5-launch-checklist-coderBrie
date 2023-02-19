@@ -25,32 +25,32 @@ function validateInput(testInput) {
       }
       return "Is a Number";
 }
-
-function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
+// put the faculty div items here//
+function formSubmission(document, pilotStatus, copilotStatus, fuelLevel, cargoStatus, launchStatus) {
    
-
-    const pilotStatus = document.getElementById("pilotStatus");
-    const copilotStatus = document.getElementById("copilotStatus");
-    const fuelStatus = document.getElementById("fuelStatus");
-    const cargoStatus = document.getElementById("cargoStatus");
-    const launchStatus = document.getElementById("launchStatus");
-    const faultyItems = document.getElementById("faultyItems");
+  //first call them
+    let pilotStatus = document.getElementById("pilotStatus");
+    let copilotStatus = document.getElementById("copilotStatus");
+    let fuelStatus = document.getElementById("fuelStatus");
+    let cargoStatus = document.getElementById("cargoStatus");
+    let launchStatus = document.getElementById("launchStatus");
+    // let faultyItems = document.getElementById("faultyItems");
   
-    // Validate input fields
-    const pilotIsValid = validateInput(pilotName) === "Is a Number";
-    const copilotIsValid = validateInput(copilotName) === "Is a Number";
-    const fuelIsValid = validateInput(fuelLevel) === "Is a Number";
-    const cargoIsValid = validateInput(cargoMass) === "Is a Number";
+    // ummm.. Validate input fields
+    // const pilotIsValid = validateInput(pilotName) === "Is a Number";
+    // const copilotIsValid = validateInput(copilotName) === "Is a Number";
+    // const fuelIsValid = validateInput(fuelLevel) === "Is a Number";
+    // const cargoIsValid = validateInput(cargoMass) === "Is a Number";
   
     // Update shuttle requirements
-    pilotStatus.innerHTML = `Pilot ${pilotName} is ${pilotIsValid ? "ready" : "not ready"}.`;
-    copilotStatus.innerHTML = `Co-pilot ${copilotName} is ${copilotIsValid ? "ready" : "not ready"}.`;
-    fuelStatus.innerHTML = `Fuel level of ${fuelLevel} liters is ${fuelIsValid ? "sufficient" : "insufficient"} for launch.`;
-    cargoStatus.innerHTML = `Cargo mass of ${cargoMass} kg is ${cargoIsValid ? "low enough" : "too high"} for launch.`;
+    // pilotStatus.innerHTML = `Pilot ${pilotName} is ${pilotIsValid ? "ready" : "not ready"}.`;
+    // copilotStatus.innerHTML = `Co-pilot ${copilotName} is ${copilotIsValid ? "ready" : "not ready"}.`;
+    // fuelStatus.innerHTML = `Fuel level of ${fuelLevel} liters is ${fuelIsValid ? "sufficient" : "insufficient"} for launch.`;
+    // cargoStatus.innerHTML = `Cargo mass of ${cargoMass} kg is ${cargoIsValid ? "low enough" : "too high"} for launch.`;
   
-    // Check shuttle requirements
+    // ummm... Check shuttle requirements
     let hasFaultyItems = false;
-    if (fuelIsValid && fuelLevel < 10000) {
+    if (fuelIsvalid && fuelLevel < 10000) {
       fuelStatus.innerHTML = `Fuel level of ${fuelLevel} liters is insufficient for launch.`;
       hasFaultyItems = true;
     }
