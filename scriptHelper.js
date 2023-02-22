@@ -26,14 +26,10 @@ function validateInput(testInput) {
       return "Is a Number";
 }
 // put the faculty div items here//
-function formSubmission(document, pilotStatus, copilotStatus, fuelLevel, cargoStatus, launchStatus) {
+function formSubmission() {
    
   //first call them
-    let pilotStatus = document.getElementById("pilotStatus");
-    let copilotStatus = document.getElementById("copilotStatus");
-    let fuelStatus = document.getElementById("fuelStatus");
-    let cargoStatus = document.getElementById("cargoStatus");
-    let launchStatus = document.getElementById("launchStatus");
+    
     // let faultyItems = document.getElementById("faultyItems");
   
     // ummm.. Validate input fields
@@ -49,27 +45,30 @@ function formSubmission(document, pilotStatus, copilotStatus, fuelLevel, cargoSt
     // cargoStatus.innerHTML = `Cargo mass of ${cargoMass} kg is ${cargoIsValid ? "low enough" : "too high"} for launch.`;
   
     // ummm... Check shuttle requirements
-    let hasFaultyItems = false;
-    if (fuelIsvalid && fuelLevel < 10000) {
-      fuelStatus.innerHTML = `Fuel level of ${fuelLevel} liters is insufficient for launch.`;
-      hasFaultyItems = true;
-    }
-   else if (cargoIsValid && cargoMass > 10000) {
-      cargoStatus.innerHTML = `Cargo mass of ${cargoMass} kg is too high for launch.`;
-      hasFaultyItems = true;
-    }
-   else if (hasFaultyItems) {
-      faultyItems.style.visibility = "visible";
-      launchStatus.innerHTML = "Shuttle not ready for launch";
-      launchStatus.style.color = "red";
-    } else {
-      faultyItems.style.visibility = "hidden";
-      launchStatus.innerHTML = "Shuttle is ready for launch";
-      launchStatus.style.color = "green";
-    }
+//     let hasFaultyItems = false;
+//     if (fuelIsvalid && fuelLevel < 10000) {
+//       fuelStatus.innerHTML = `Fuel level of ${fuelLevel} liters is insufficient for launch.`;
+//       hasFaultyItems = true;
+//     }
+//    else if (cargoIsValid && cargoMass > 10000) {
+//       cargoStatus.innerHTML = `Cargo mass of ${cargoMass} kg is too high for launch.`;
+//       hasFaultyItems = true;
+//     }
+//    else if (hasFaultyItems) {
+//       faultyItems.style.visibility = "visible";
+//       launchStatus.innerHTML = "Shuttle not ready for launch";
+//       launchStatus.style.color = "red";
+//     } else {
+//       faultyItems.style.visibility = "hidden";
+//       launchStatus.innerHTML = "Shuttle is ready for launch";
+//       launchStatus.style.color = "green";
+//     }
   
-    // Prevent default form submission
-    event.preventDefault();
+//     // Prevent default form submission
+//     event.preventDefault();
+
+
+
   }
 //stop the submission//
 async function myFetch() {
