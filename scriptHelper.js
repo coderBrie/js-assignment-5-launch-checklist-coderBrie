@@ -27,46 +27,7 @@ function validateInput(testInput) {
 }
 // put the faculty div items here//
 function formSubmission() {
-   
-  //first call them
-    
-    // let faultyItems = document.getElementById("faultyItems");
-  
-    // ummm.. Validate input fields
-    // const pilotIsValid = validateInput(pilotName) === "Is a Number";
-    // const copilotIsValid = validateInput(copilotName) === "Is a Number";
-    // const fuelIsValid = validateInput(fuelLevel) === "Is a Number";
-    // const cargoIsValid = validateInput(cargoMass) === "Is a Number";
-  
-    // Update shuttle requirements
-    // pilotStatus.innerHTML = `Pilot ${pilotName} is ${pilotIsValid ? "ready" : "not ready"}.`;
-    // copilotStatus.innerHTML = `Co-pilot ${copilotName} is ${copilotIsValid ? "ready" : "not ready"}.`;
-    // fuelStatus.innerHTML = `Fuel level of ${fuelLevel} liters is ${fuelIsValid ? "sufficient" : "insufficient"} for launch.`;
-    // cargoStatus.innerHTML = `Cargo mass of ${cargoMass} kg is ${cargoIsValid ? "low enough" : "too high"} for launch.`;
-  
-    // ummm... Check shuttle requirements
-//     let hasFaultyItems = false;
-//     if (fuelIsvalid && fuelLevel < 10000) {
-//       fuelStatus.innerHTML = `Fuel level of ${fuelLevel} liters is insufficient for launch.`;
-//       hasFaultyItems = true;
-//     }
-//    else if (cargoIsValid && cargoMass > 10000) {
-//       cargoStatus.innerHTML = `Cargo mass of ${cargoMass} kg is too high for launch.`;
-//       hasFaultyItems = true;
-//     }
-//    else if (hasFaultyItems) {
-//       faultyItems.style.visibility = "visible";
-//       launchStatus.innerHTML = "Shuttle not ready for launch";
-//       launchStatus.style.color = "red";
-//     } else {
-//       faultyItems.style.visibility = "hidden";
-//       launchStatus.innerHTML = "Shuttle is ready for launch";
-//       launchStatus.style.color = "green";
-//     }
-  
-//     // Prevent default form submission
-//     event.preventDefault();
-
+ 
 
 
   }
